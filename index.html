@@ -415,7 +415,7 @@ function update(dt){
  if(!p.moving){nearestInteract();return}
  if(Math.abs(dx)>Math.abs(dy))p.dir=dx<0?"left":"right"; else p.dir=dy<0?"up":"down";
  const l=Math.hypot(dx,dy)||1;dx/=l;dy/=l;
- const speed=map.key==="shrine"?190:map.key==="street"?155:145;
+ const speed=map.key==="shrine"?190:155;
  const nx=p.x+dx*speed*dt, ny=p.y+dy*speed*dt;
  if(canWalk(nx,p.y))p.x=nx;
  if(canWalk(p.x,ny))p.y=ny;
